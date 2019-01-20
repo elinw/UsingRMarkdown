@@ -1,0 +1,221 @@
+- Class: meta
+  Course: UsingRMarkdown
+  Lesson: RMarkdown
+  Author: Elin Waring
+  Type: Standard
+  Version: 2.4.3
+
+- Class: text
+  Output: In this lesson you will learn to use RMarkdown.
+   Using RMarkdown to create documents and notebooks
+   is an important part of the reproducible research
+   workflow.
+
+   In particular we will be using RMarkdown in RStudio.
+
+
+
+- Class: text
+  Output: Markdown is system for creating text documents that is
+    simple to use but still lets you use basic formatting
+     like bold face, italics and lists. It is similar to
+     writing in many email systems.  You may have used
+     markdown without knowing it when writing comments on
+     the Web. Markdown is especially useful for writing
+     things that will be read on the Web.
+
+    RMarkdown is a special version (sometimes called a
+     flavor) of markdown used for R. Markdown has different
+     flavors because people have added useful features
+     for different situations. For example, Github has its
+     own flavor of markdown.
+
+
+- Class: video
+  Output: Would you like to learn more about the ideas behind Markdown? Click here.
+  VideoLink: http://aaronbeveridge.com/markdown/index.html
+
+- Class: cmd_question
+  Output: The first step in learning rmarkown is to create an
+     empty file with the extension "rmd" (notice that is
+     short for rmarkdown). The extension is the part of
+     the name of a file that comes after a "." (a period
+     or dot).
+      This extension lets RStudio know
+     that it contains markdown and is not another format
+     of file such as PDF (which has the pdf extension) or Word
+     (which usually has the docx extension).
+
+
+      We'll call the first markdown file "my_markdown_1.rmd".
+      Notice that there are no spaces in the name;
+      we're using underscores instead of spaces.  This will
+      reduce the chances of problems later.
+
+
+      ***Important! If you already hae a file called my_markdown_1.rmd delete it now!***
+
+
+      To create the file type this exact command at the > prompt
+
+
+      file.edit('my_markdown_1.rmd')
+
+      double check what you typed and hit enter.
+  CorrectAnswer: file.edit('my_markdown_1.rmd')
+  AnswerTests: omnitest(correctExpr="file.edit('my_markdown_1.rmd')")
+  Hint: Type the code exactly file.edit('my_markdown_1.rmd'). Make sure you have the quotation marks.
+
+- Class: mult_question
+  Output: Look at the tab on the top of the file. What does the text on the tab say?
+  AnswerChoices: my_markdown_1;my_file.rmd;my_markdown_1.rmd
+  CorrectAnswer: my_markdown_1.rmd
+  AnswerTests: omnitest(correctVal='my_markdown_1.rmd')
+  Hint: Copy the text exactly.
+
+- Class: mult_question
+  Output: On the lower right of RStudio thre is an area with tabs.
+     Select the tab labelled Files.  Look for the new file
+     you created. In the Size colunmn, what does it say
+     is the size of your file?
+  AnswerChoices: 1 KB;0 B; 29B
+  CorrectAnswer: 0 B
+  AnswerTests: omnitest(correctVal='0 B')
+  Hint: The size is to the right of of the file name. If you need a 0 make sure you do not type O.
+
+
+- Class: mult_question
+  Output: What is the correct file extension for an rmarkdown file?
+  AnswerChoices: docx;rmd;pdf
+  CorrectAnswer: rmd
+  AnswerTests: omnitest(correctVal='rmd')
+  Hint: Look at the extension for your file for an example.
+
+- Class: mult_question
+  Output: Look at toolbar at the top of your file. Which do you see?
+  AnswerChoices: The word Knit with a ball of yard; The word Sew with a needle and thread; The word Cook with a frying pan.
+  CorrectAnswer: The word Knit with a ball of yard
+  AnswerTests: omnitest(correctVal='The word Knit with a ball of yard')
+  Hint: Look right above the top of your file.
+
+- Class: text
+  Output: Now move your cursor to the top line of the file (which should have the number 1 to the left).
+     If you accidently got a 1 on the white part of the screen, delete it.
+     Type your name and then click enter/return on your keyboard. (Which one depends
+     on your computer).
+
+- Class: mult_question
+  Output: What happened when you hit enter/return?
+  AnswerChoices: The cursor went to a new line that has no number; The cursor went to a new line and the number 2 appeared to the left.; Nothing happened;
+  CorrectAnswer: The cursor went to a new line and the number 2 appeared to the left.
+  AnswerTests: omnitest(correctVal='The cursor went to a new line and the number 2 appeared to the left.')
+  Hint: Look carefully at the screen.
+
+- Class: text
+  Output: So far you have a very simple document, with just your name.
+    Before we do anything fancier, let's learn how to output
+    the file into different formats.  As usual in R there are
+    several different ways of doing this.
+
+- Class: text
+  Output: For this session and in general for working with RMarkdown you
+     will sometimes notice that sometimes you get a pop up message about pop ups.
+     Click on "Try again."
+
+- Class: mult_question
+  Output: At the top of the editor window, click on the Knit icon.
+      Make sure you allow popups or click Try Again
+      What happened?
+  AnswerChoices: I got a pop up screen with my name on it.;
+      I got a not allowed message and I don't know what to do.;
+      Nothing;
+  CorrectAnswer: I got a pop up screen with my name on it.;
+  AnswerTests: omnitest(correctVal='I got a pop up screen with my name on it.')
+  Hint: If nothing happened, try clicking the Knit icon again.  If you got a pop up click on "Try Again"
+      or "Allow" or whatever similar option you are getttin
+
+- Class: mult_question
+  Output: Look in the Folders tab.  You should see a new file called
+     my_markdown_1.html.   If you don't see that file
+     and you skipped the previous question that created the
+     file, go back and do that question.
+
+     Look at the size of the file.  How big is it?
+  AnswerChoices: 0 B; More than 0 B but less than my_markdown_1.rmd.; More than my_markdown_1.rmd.
+  CorrectAnswer: More than my_markdown_1.rmd.
+  AnswerTests: omnitest(correctVal='More than my_markdown_1.rmd.')
+  Hint: Look in the size column of the Files tab.
+
+- Class: mult_question
+  Output: What is the file extension of your new file?
+  AnswerChoices: rmd; html; pdf; my_markdown_1
+  CorrectAnswer: html
+  AnswerTests: omnitest(correctVal='html')
+  Hint: The extension is the part that comes efter the '.' in the name of the file.
+
+
+- Class: mult_question
+  Output: This time let's make a PDF file.
+
+     Next to the Knit icon there is a tiny triangle. Click on
+     that and select Knit to PDF.  Allow pop ups if needed.
+     What popped up?
+  AnswerChoices: The same thing as the previous knit; A pdf file with your name; Nothing; A message saying not allowed; Something else
+  CorrectAnswer: A pdf file with your name
+  AnswerTests: omnitest(correctVal='A pdf file with your name')
+  Hint: Make sure you select "Knit to PDF". Also if you get a "not allowed message" click "try again."
+
+- Class: mult_question
+  Output: Look at your files.  There should now be a file called my_markdown_1.pdf.
+      How does the size compare to the htmil file?
+  AnswerChoices: The PDF is larger than the HTML.; The  HTML is larger than the PDF.; The HTML and PDF are the same size.
+  CorrectAnswer: The  HTML is larger than the PDF.
+  AnswerTests: omnitest(correctVal='The  HTML is larger than the PDF.')
+  Hint: Look in the size column of your Files tab.  If there is no PDF
+     file then try knit to PDF again.
+
+- Class: mult_question
+  Output: What happened in your my_markdown_1.rmd file in the editor?
+  AnswerChoices: Nothing.;Some new lines were added at the top.; Your name was deleted.
+  CorrectAnswer: Some new lines were added at the top.
+  AnswerTests: omnitest(correctVal='Some new lines were added at the top.')
+  Hint: Look in your file.
+
+- Class: text
+  Output: The added text at the top of your file is called YAML.
+    We won't go into the details at this point, and most of the
+    time you can leave it alone.  The important thing to know
+    are never to delete the ---  at the top and the bottom
+    of the top section (you can delete the whole top section including the ---) and that the
+    other parts are very fussy in terms of things like spaces after the `:`s.
+
+- Class: mult_question
+  Output: When is it okay to delete the --- lines in the  top section of
+     a markdown file?
+  AnswerChoices: Any time you want.;Never.; When you delete the whole top section.
+  CorrectAnswer: When you delete the whole top section.
+  AnswerTests: omnitest(correctVal='When you delete the whole top section.')
+  Hint: Reread the previous paragraph.
+
+- Class: mult_question
+  Output: Now, go back to the Knit icon and this time Knit to Word.
+     What is the name of the file that is created by this knitting?
+  AnswerChoices: my_markdown_1.rmd;my_markdown_1.docx;my_markdown_1.pdf
+  CorrectAnswer: my_markdown_1.docx
+  AnswerTests: omnitest(correctVal='my_markdown_1.docx')
+  Hint: Look for the Word file in the files tab.
+
+- Class: mult_question
+  Output: What is the file extension of the Word file?
+  AnswerChoices: html;docx;my_markdown_1
+  CorrectAnswer: docx
+  AnswerTests: omnitest(correctVal='docx')
+  Hint: Remember that the extension is the part
+      of the name after the period (`.`).
+
+- Class: text
+  Output: Congratulations! Now you know how to create a RMarkdown
+     file and to knit it to different file types.
+
+     In the next lesson we'll learn to add nicely formatted
+     content.

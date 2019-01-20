@@ -1,0 +1,253 @@
+- Class: meta
+  Course: UsingRMarkdown
+  Lesson: Adding content
+  Author: Elin Waring
+  Type: Standard
+  Version: 2.4.3
+
+
+- Class: text
+  Output: Now that you know how to create a RMarkdown file and knit it
+     to various formats, let's add some content to the
+     document.
+
+     If you don't have my_markdown_1.rmd open in your editor
+     open it now by clicking on it in your file list.
+
+      When doing this lesson you will sometimes see "tick marks" that look like "`".
+      Do not type these ... they are needed to let Swirl run.
+
+- Class: mult_question
+  Output: For our example, let's make an autobiography.
+
+   We will start by creating an outline of headings and
+   subheadings.  In markdown these are indicated by a `#`
+   on the left side.  Now turn the line with your name on it
+   into the main heading.  Put a "#" before your name. It should
+   look like this
+
+   `# Name`
+
+   Knit the file.
+
+   How does the knitted file compare to the previous version?
+  AnswerChoices: It is the same;The text is in italics;The text is bigger and bolder
+  CorrectAnswer: The text is bigger and bolder
+  AnswerTests: omnitest(correctVal='The text is bigger and bolder')
+  Hint: Make sure you added the "#"" and knitted the document.
+        Don't forget to not include the back ticks!
+
+- Class: mult_question
+  Output: Does the "#" show in your knitted document?
+  AnswerChoices: Yes;No
+  CorrectAnswer: No
+  AnswerTests: omnitest(correctVal='No')
+  Hint: Look at your knitted document and see if there is a "#".
+        If there is one, check your document knit again.
+
+- Class: text
+  Output: The "#" does not show because it is "mark up" meaning it
+     is giving instructions to Knit about how to
+     format the document.  A single "#"" says that what
+     follows is Header level 1 or H1.
+
+- Class: mult_question
+  Output: Now  let's add subheadings call H2 or Header level 2.
+      You do this by putting two hash tags `##`.
+      Add
+
+      `## Early years`
+
+      and then two more subheadings`:` Life before College
+      and College Days
+
+     Knit your document.  How does the text in the level 2
+     headings compare to the text in level 1?
+
+  AnswerChoices: Exactly the same; Slightly smaller; Slightly larger; Not sure
+  CorrectAnswer: Slightly smaller
+  AnswerTests: omnitest(correctVal='Slightly smaller')
+  Hint: Look at the file closely. Also if you are not sure,
+        try knitting to another format.
+        Don't forget to not include the back ticks!
+
+
+- Class: mult_question
+  Output: Do you see the `##` once you have knitted?
+  AnswerChoices: Yes;No;Not sure
+  CorrectAnswer: No
+  AnswerTests: omnitest(correctVal='No')
+  Hint: If you do see "##"check your file, make sure the line starts with "##".
+     You can also try adding a blank line before your H2 line and put a space after "##".
+
+- Class: text
+  Output: The "##" go away when you knit because they are markup characters and tell
+     Knitr how to format the text that follows.
+
+     The text looks slightly different because of some hidden
+     instructions that say how to format each level.  When you learn more
+     you can learn how to modify these to do things like change fonts,
+     font sizes or colors.
+
+
+- Class: mult_question
+  Output: Now let's follow the same logic and add H3 using "###".
+    Underneath the College Days put "### Lehman College"
+    and additional "###" headings for each other college
+    you have attended (if any).
+
+    Knit your file, trying at least two formats (such as
+    PDF, HTML and Word).
+
+    How do the H3 headings compare to the H2 headings?
+  AnswerChoices: The same;Smaller;Larger;Not sure
+  CorrectAnswer: Smaller
+  AnswerTests: omnitest(correctVal='Smaller')
+  Hint: Check the different formats if you can't see difference.
+     If the headings are not showing as headings, make sure they
+     are on  new lines and consider adding spaces above
+     and below the heading lines.
+     Make sure to not include the "" marks.
+
+- Class: mult_question
+  Output: Look at the top of your markdown file.  What happens in the file when you
+     knit to different formats (PDF, HTML, Word)?
+  AnswerChoices: Nothing.;The order of the document types changes.;The color of the text changes.
+  CorrectAnswer: The order of the document types changes.
+  AnswerTests: omnitest(correctVal='The order of the document types changes.')
+  Hint: Try knitting to each format and look back at your markdown file after each know.
+
+
+- Class: text
+  Output: Now let's add some text to the document.
+         Always put a blank line between what you type and the next header.
+         Under the main heading (with your name) add a sentence
+         saying something about yourself.
+         Under the Early Years add a sentence about you when you
+         were under age 12.
+         Under Life Before College add a sentence about what your life
+         from age 13 until you started college.
+         Under College Days add a sentence about your life while you have been
+         in college.
+
+- Class: mult_question
+  Output: Knit your document to the format of your choice. How does the
+        text you added look?
+  AnswerChoices: Like regular text;Like text but the headers are messed up;Like a header.
+  CorrectAnswer: Like regular text
+  AnswerTests: omnitest(correctVal='Like regular text')
+  Hint: If it doesn't look like regular text, check to make sure that
+     you have a blank line before each header line.
+     Make sure you didn't accidently modify your header lines.
+
+- Class: mult_question
+  Output: Let's make the first sentence of your document italics.
+     Do this by putting `_` before and after the sentence.
+     This is called an underscore.  You will find the key to the
+     right of the 0 on the keyboard, use the shift key.
+     Knit your document.  Is the sentence italics?
+  AnswerChoices: Yes;No;Not sure
+  CorrectAnswer: Yes
+  AnswerTests: omnitest(correctVal='Yes')
+  Hint: Make sure you have put _ before and after the text.
+     For example`:`
+
+     _I was born in the Bronx_
+
+     Italics makes the text look slanted.
+     Do not include the tick marks.
+
+- Class: mult_question
+  Output: Let's make a word bold face.  To do this put `**` before
+      and after the word.
+
+      Knit your document.  What does the word look like?
+  AnswerChoices: Darker;Lighter;The same; Not sure
+  CorrectAnswer: Darker
+  AnswerTests: omnitest(correctVal='Darker')
+  Hint: The boldface should make your word look darker.
+     Your word should look like
+
+     **School**
+    Make sure to not include the "" marks.
+
+- Class: mult_question
+  Output: Next let's make a numbered list.
+
+   Under Life Before College put schools you attended
+   with one school per line.
+
+   At the beginnning of each lie put a number followed by
+   a period (`.`).  So 1., 2., 3. and so on.
+
+   Make sure to have a space between the `.` and the text.
+
+   Put a blank line after the last item in the list.
+
+   Knit your document. What does it look like?
+  AnswerChoices: A nicely formatted list with all the number aligned underneath each other; Something else.
+  CorrectAnswer: A nicely formatted list with all the number aligned underneath each other
+  AnswerTests: omnitest(correctVal='A nicely formatted list with all the number aligned underneath each other')
+  Hint: Make sure that each number has a period (`.`) after it.
+      Make sure you are starting each newnumber on an new
+      line.
+      Make sure you have a blank line after the last item.
+      Make sure to not include the tick marks.
+
+- Class: text
+  Output:
+      If you have problems with lists it will almost
+      always be dur to missing spaces or blank lines.
+      Sometimes you will also need to put two blank spaces
+      at the end of each item on your list.
+
+
+
+- Class: mult_question
+  Output: Now let's add an unnumbered list also called a bulleted list.
+     Under Life
+
+     Put `*` followed by a space and then the name.
+
+     Repeat this for several names.
+
+     Knit your document.  How does the list of names look?
+  AnswerChoices: Like a list of names with 'bullets' next to each item.;Not like a list.
+  CorrectAnswer: Like a list of names with 'bullets' next to each item.
+  AnswerTests: omnitest(correctVal="Like a list of names with 'bullets' next to each item.")
+  Hint: Make sure that you have a space between the * and the name.
+        Have only one name per line.
+        Leave a blank line after the end of the list.
+
+- Class: mult_question
+  Output: We've mentioned before that it is possible to make your
+     output look very different. As our last step
+     let's try that.  Dirctly underneath and above the
+     first output option put
+
+     output`:`
+
+     put
+
+     tufte`::`tufte_html`:` default
+
+     and knit.
+
+     What happened to your document?
+  AnswerChoices: Whoa it looks really different.;It looks the same.;I got an error message.
+  CorrectAnswer: Whoa it looks really different.
+  AnswerTests: omnitest(correctVal='Whoa it looks really different.')
+  Hint: Make sure that you typed the letters exactly including the
+     double colon between tufte and tufte_html and the single
+     colon after html, followed by a space and the word default.
+     Make sure the namesfor the different document formats
+     lineup on the left.
+
+
+- Class: text
+  Output: There are many more aspects of formatting RMarkdown documents
+     that we can learn, but now you have some basic tools.  In
+     the RStudio Help menu you will find some links to RMarkdown
+     resources.  There are also many resources on the Web.
+
+     Now let's continue to lesson three, where we add code.
