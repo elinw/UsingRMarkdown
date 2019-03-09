@@ -54,12 +54,12 @@
    you inserted.
 
 - Class: text
-  Output: The area created when you insert is called a
-   **code chunk** and it is where you insert R code. You
+  Output: The area created when you insert is called
+   a **code chunk** and it is where you insert R code. You
    The code always goes in the space between the
    lines that start with  '```'.
 
-   Thie '```' lines are called fences.
+   The '```' lines are called fences.
    Never put code or text on the same line as the fences.
    (the first and last lines of a code chunk).
 
@@ -70,10 +70,8 @@
    The knitted file shows code but no results.;
    The file does not knit.
   CorrectAnswer: The knitted document shows the code and the results of running the code.
-
   AnswerTests: omnitest(correctVal='The knitted document shows the code and the results of running the code.')
   Hint: Make sure you have put 2+2 inside the code chunk, not on the fences (top or bottom lines).
-
     Make sure that you have {r} on the top fence.
 
 - Class: text
@@ -84,10 +82,7 @@
 
 - Class: mult_question
   Output: Inside your code chunk type sys.Date().
-
     Make sure the D is capitalized.
-
-
     What happens?
   AnswerChoices: Nothing;The date displays.;The date and time display.
   CorrectAnswer: The date displays.
@@ -104,7 +99,6 @@
    The one furthest to the right is a green triangle
    pointing to the right (Run current code chunk if you
    put your mouse over it).
-
    Click on the green triangle.
 
 - Class: mult_question
@@ -145,7 +139,6 @@
     the second icon runs the code in all the chunks above
     the current chunk. This can be very helpful when
     solving problems.
-
     The first chunk does not have the middle icon because there
     are no chunks before it.
 
@@ -153,7 +146,6 @@
   Output: Pick one of your code chunks that has code in it.
     Use the gear icon for the chunk (the one on the left) and on
     the output options, select "Show output only."
-
     What happens inside {r}?
   AnswerChoices: Nothing.;
       'echo=FALSE' is added after the r.;
@@ -190,7 +182,6 @@
 - Class: text
   Output: If you want to just show or explain code, removing the r
      will cause that to happen.
-
     Overall there are many variations on what to run and
     display in your knitted document.
 

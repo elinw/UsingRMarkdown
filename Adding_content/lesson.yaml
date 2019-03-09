@@ -205,9 +205,9 @@
 
 - Class: mult_question
   Output: Now let's add an unnumbered list also called a bulleted list.
-     Under Life
+     Under Life before College
 
-     Put `*` followed by a space and then the name.
+     Put `*` followed by a space and then the name of a family member or friend.
 
      Repeat this for several names.
 
@@ -222,14 +222,13 @@
 - Class: mult_question
   Output: We've mentioned before that it is possible to make your
      output look very different. As our last step
-     let's try that.  Dirctly underneath and above the
-     first output option put
-
-     output`:`
+     let's try that.  Directly underneath     output`:`
+     and above the first output option as of now put
 
      put
 
-     tufte`::`tufte_html`:` default
+     tufte::tufte_html`:` default  without the quotation marks in the middle!!! And exactly 1 space
+     after the colon.
 
      and knit.
 
@@ -240,7 +239,7 @@
   Hint: Make sure that you typed the letters exactly including the
      double colon between tufte and tufte_html and the single
      colon after html, followed by a space and the word default.
-     Make sure the namesfor the different document formats
+     Make sure the names for the different document formats
      lineup on the left.
 
 

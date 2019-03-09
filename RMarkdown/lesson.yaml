@@ -140,7 +140,7 @@
      and you skipped the previous question that created the
      file, go back and do that question.
 
-     Look at the size of the file.  How big is it?
+     Look at the size of the file.  How big is it? (KB means 1000 Bs)
   AnswerChoices: 0 B; More than 0 B but less than my_markdown_1.rmd.; More than my_markdown_1.rmd.
   CorrectAnswer: More than my_markdown_1.rmd.
   AnswerTests: omnitest(correctVal='More than my_markdown_1.rmd.')
@@ -166,8 +166,8 @@
   Hint: Make sure you select "Knit to PDF". Also if you get a "not allowed message" click "try again."
 
 - Class: mult_question
-  Output: Look at your files.  There should now be a file called my_markdown_1.pdf.
-      How does the size compare to the htmil file?
+  Output: Look at your files.  There should now be a file called my_markdown_1.pdf. (It may be at the bottom.)
+      How does the size compare to the html file?
   AnswerChoices: The PDF is larger than the HTML.; The  HTML is larger than the PDF.; The HTML and PDF are the same size.
   CorrectAnswer: The  HTML is larger than the PDF.
   AnswerTests: omnitest(correctVal='The  HTML is larger than the PDF.')
