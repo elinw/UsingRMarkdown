@@ -1,0 +1,201 @@
+- Class: meta
+  Course: UsingRMarkdown
+  Lesson: Adding_Code
+  Author: Elin Waring
+  Type: Standard
+  Version: 2.4.3
+
+- Class: text
+  Output: So far, we've just been adding text to the RMarkdown file.
+   Interesting, but if we only wante to write probably  a
+   word processor is better.
+
+   In this lesson we'll add R code.
+   This is where RMarkdown becomes extremely powerful. Rather
+   than copying and pasting our results or even worse having
+    to retype them, using RMarkdown lets us keep our text and analysis
+    in one place.
+
+- Class: text
+  Output: In the menu bar for your document you will see a
+   button that says "Insert."  Click that and select
+
+   Insert R, and click.
+
+
+- Class: mult_question
+  Output: What Happened?
+  AnswerChoices: A line that says 'r' is inserted;
+   Two lines  are inserted;
+   Three lines are inserted
+  CorrectAnswer: Three lines are inserted
+  AnswerTests: omnitest(correctVal='Three lines are inserted')
+  Hint: Count the lines and include any blank lines.
+    You can insert another line if you wish.
+
+- Class: mult_question
+  Output: Which is true about the lines inserted?
+  AnswerChoices: The first and last lines start with '```';
+   The first and last lines start with ''';
+   The first and last lines start with ',,,'
+  CorrectAnswer: The first and last lines start with '```';
+  AnswerTests: omnitest(correctVal='The first and last lines start with '```';')
+  Hint: Look carefully at the inserted lines.
+
+- Class: mult_question
+  Output: How does the first line end?
+  AnswerChoices: It ended with {r}.;
+      It ended with '{}'.;
+      It ended with '```'.
+  CorrectAnswer: {r}
+  AnswerTests: omnitest(correctVal='{r}')
+  Hint: Look carefully ... insert again if that will
+   help. Make sure to insert outside of any other place
+   you inserted.
+
+- Class: text
+  Output: The area created when you insert is called a
+   **code chunk** and it is where you insert R code. You
+   The code always goes in the space between the
+   lines that start with  '```'.
+
+   Thie '```' lines are called fences.
+   Never put code or text on the same line as the fences.
+   (the first and last lines of a code chunk).
+
+- Class: mult_question
+  Output: Inside your code chunk, type 2+5 and then knit the file.  What happens?
+  AnswerChoices: The knitted document shows the code and the results of running the code.;
+   The knitted file shows the results but not the code.;
+   The knitted file shows code but no results.;
+   The file does not knit.
+  CorrectAnswer: The knitted document shows the code and the results of running the code.
+
+  AnswerTests: omnitest(correctVal='The knitted document shows the code and the results of running the code.')
+  Hint: Make sure you have put 2+2 inside the code chunk, not on the fences (top or bottom lines).
+
+    Make sure that you have {r} on the top fence.
+
+- Class: text
+  Output: Add another code chunk (In the menu bar for your document you will see a
+    button that says "Insert."  Click that and select
+    Insert R, and click.  )
+
+
+- Class: mult_question
+  Output: Inside your code chunk type sys.Date().
+
+    Make sure the D is capitalized.
+
+
+    What happens?
+  AnswerChoices: Nothing;The date displays.;The date and time display.
+  CorrectAnswer: The date displays.
+  AnswerTests: omnitest(correctVal='The date displays.')
+  Hint: Check that sys.Date() is spelled correctly
+    with the upper case D. Also make sure you are clicking the
+    triangle (Run current code chunk) not one of the other buttons.
+
+
+
+- Class: text
+  Output:  On the top right of each of your code chunks there are
+   icons.
+   The one furthest to the right is a green triangle
+   pointing to the right (Run current code chunk if you
+   put your mouse over it).
+
+   Click on the green triangle.
+
+- Class: mult_question
+  Output: What happened?
+  AnswerChoices: The left margin turned green and the results were shown below the chunk.;The left margin turned red and the results were shown below the chunk.;There are no icons.; Something else
+  CorrectAnswer: The left margin turned green and the results were shown below the chunk.
+  AnswerTests: omnitest(correctExpr='EXPR', correctVal=VAL)
+  Hint: Make sure that your code is correct and that it is
+    completely between the fences. If you don't see icons,
+    make sure that both of your fences have exactly 3 "`" characters.
+
+- Class: mult_question
+  Output: Look at your **first** code chunk.  How many icons are on the far right?
+  AnswerChoices: 0;2;3
+  CorrectAnswer: 2
+  AnswerTests: omnitest(correctVal='2')
+  Hint: Make sure you look at the first chunk.
+
+- Class: mult_question
+  Output: Look at the second chunk, how many icons are there?
+  AnswerChoices: 1;2;3
+  CorrectAnswer: 3
+  AnswerTests: omnitest(correctVal='3')
+  Hint: Make sure you are not looking at the first chunk.
+    Add a new chunk if you need to.
+
+- Class: mult_question
+  Output: On your last code chunk, click the middle icon.  What happens?
+  AnswerChoices: The code in the chunk runs.;The code in all the chunks before this chunk runs.; All the code in the document runs.; Nothing.
+  CorrectAnswer: The code in all the chunks before this chunk runs.
+  AnswerTests: omnitest(correctVal='The code in all the chunks before this chunk runs.')
+  Hint: Make sure you have at least two code chunks and
+    are in the last code chunk.  Watch what happens when
+    you run the code.
+
+- Class: text
+  Output: The green triangle runs the code in the current chunk, while
+    the second icon runs the code in all the chunks above
+    the current chunk. This can be very helpful when
+    solving problems.
+
+    The first chunk does not have the middle icon because there
+    are no chunks before it.
+
+- Class: mult_question
+  Output: Pick one of your code chunks that has code in it.
+    Use the gear icon for the chunk (the one on the left) and on
+    the output options, select "Show output only."
+
+    What happens inside {r}?
+  AnswerChoices: Nothing.;
+      'echo=FALSE' is added after the r.;
+      'output=FALSE' is added after the r.
+  CorrectAnswer: echo=FALSE is added after the r.
+  AnswerTests: omnitest(correctVal='echo=FALSE is added after the r.')
+  Hint: Try again. If something else was added, delete it or select revert.
+
+- Class: text
+  Output: Knit your document and look at the results.
+
+- Class: mult_question
+  Output: What changed for the chunk with echo=FALSE?
+  AnswerChoices: The code did not display.;The results of the code did not display.; Nothing changed.
+  CorrectAnswer: The code did not display.
+  AnswerTests: omnitest(correctVal='The code did not display.')
+  Hint: Make sure you are looking at the code chunk with echo=FALSE.
+
+- Class: text
+  Output: While showing code is useful while working, sometimes
+    you will not want to show the code when you share the
+    results with others. So setting echo=FALSE can help
+    create a more useful and professional looking document.
+
+- Class: mult_question
+  Output: What shows in your knitted document for the code chunk
+    where you removed the r?
+  AnswerChoices: The code and the results.;Just the code.;Just the results.
+  CorrectAnswer: Just the code.
+  AnswerTests: omnitest(correctVal='Just the code.')
+  Hint: Make sure you are looking at the correct chunk.
+     Make sure you really removed the r.
+
+- Class: text
+  Output: If you want to just show or explain code, removing the r
+     will cause that to happen.
+
+    Overall there are many variations on what to run and
+    display in your knitted document.
+
+- Class: text
+  Output: This wraps up our introduction to using R markdown.
+    There are many additional resources available for using
+    R markdown. Some of them can be found in the Help
+    menu in R Studio.  Other can be found on the internet.
